@@ -1,0 +1,51 @@
+.table-editable {
+  position: relative;
+}
+.table-editable .glyphicon {
+  font-size: 15px;
+}
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
+}
+.table-remove:hover {
+  color: #f00;
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+}
+.table-up:hover, .table-down:hover {
+  color: #00f;
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 110px;
+  font-size: 30px;
+}
+.table-add:hover {
+  color: #0b0;
+}
+th,td{
+  border: 0.5px solid black;
+  max-width: 350px;
+}
+
+.tr1{
+      font-size: 25px;
+    font-family: monospace;
+    font-style: italic;
+    font-variant: petite-caps;
+    color: #770000;
+    font-weight: bolder;
+  }
+.r1{
+  width: 70px;
+  max-width: 90px;
+}
