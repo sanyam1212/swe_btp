@@ -1,6 +1,7 @@
 var $TABLE = $('#table');
 var $BTN = $('#export-btn');
 var arr = new Array();
+var i=1;
 //var $EXPORT = $('#export');
 
 $('.table-add').click(function () {
@@ -14,7 +15,7 @@ $('.table-remove').click(function () {
 
 $('.table-up').click(function () {
   var $row = $(this).parents('tr');
-  if ($row.index() === 1) return; // Don't go above the header
+  if ($row.index() === 1) return; 
   $row.prev().before($row.get(0));
 });
 
@@ -23,7 +24,7 @@ $('.table-down').click(function () {
   $row.next().after($row.get(0));
 });
 
-// A few jQuery helpers for exporting only
+//jQuery helpers
 jQuery.fn.pop = [].pop;
 jQuery.fn.shift = [].shift;
 
@@ -56,13 +57,29 @@ function downloadCSV(csv, filename) {
     downloadLink.click();                                         // Click download link
 }
 
-function time(){
-  var d = new Date(),
+function add(){
+   /* var d = new Date(),
     h = (d.getHours()<10?'0':'') + d.getHours(),
     m = (d.getMinutes()<10?'0':'') + d.getMinutes();
     s = (d.getSeconds()<10?'0':'') + d.getSeconds();
   var time = h + ':' + m + ':' + s;
-  //alert(time);
-  //arr.push(time);
-  document.getElementById("ts").innerHTML = time;
+  alert(time);
+  arr.push(time);*/
+  document.getElementById("serial").innerHTML = i;
+  //document.getElementById("ts").innerHTML = time;
+  i++;
 }
+/*
+function change(){
+  //document.getElementById("select");
+  var d = new Date(),
+    h = (d.getHours()<10?'0':'') + d.getHours(),
+    m = (d.getMinutes()<10?'0':'') + d.getMinutes();
+    s = (d.getSeconds()<10?'0':'') + d.getSeconds();
+  var time1 = h + ':' + m + ':' + s;
+  alert(time1);
+  document.getElementById("ts").innerHTML ="hi";
+  var s = document.getElementById("serial").innerHTML;
+  alert(s);
+  document.getElementById("tab").rows[i-1].cells[5].innerHTML = time1;
+}*/
