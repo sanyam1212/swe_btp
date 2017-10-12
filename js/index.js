@@ -28,6 +28,12 @@ $('.table-down').click(function () {
 jQuery.fn.pop = [].pop;
 jQuery.fn.shift = [].shift;
 
+function exporttocsv() {  
+          $("#tab").tableToCSV({  
+              filename: 'Save_with_your_roll_number'  
+          });  
+      }
+
 function exportTableToCSV(filename) {
     var csv = [];
     var rows = document.querySelectorAll("table tr");

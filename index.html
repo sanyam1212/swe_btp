@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>v0.4</title>
+  <title>SWE_CG</title>
   <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
   <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
   <link rel="stylesheet" href="css/style.css">
@@ -10,22 +10,31 @@
 
 <body>
   <div class="container">
-  <h1>Software Eng. Quiz</h1>
-  <b>1) Please fill your personal details before starting!</b>
-  <p>2) <span style="font-size: 20px; font-weight: bolder; color: red;">DO NOT</span> <b>press "Enter" throughout the table when filling the user stories</b><br>
-  3) <b>Also please do not refresh your page while submitting</b><br>
-  4) In Priority write H/M/L for High/Medium/Low respectively.<br>
-  5) You can add a user story by clicking on "+" icon in top-right and delete by clicking on "X" adjacent to the story. Also, you can sort the user stories according to actors by using the "up & down arrow keys".<br>
-  Now, you can proceed with the case study and write the user stories: </p>
-  <b style="margin-left: 510px;">Sample Submission</b>
+  <h1>SWE Quiz #1</h1>
+  <h5></h5>
+  <b>1) Please fill the venue (LT1/LT2/LAB1/LAB2), your name and roll number in the first row before you start adding user stories.
+  <br>
+  2) <span style="font-size: 15px; color: red;">DO NOT</span> press "Enter" when you are typing text into the following table.
+  <br>
+  3) Also please <span style="font-size: 15px; color: red;">DO NOT</span> refresh your page before submitting</b>
+  <br>
+  4) In Priority write H/M/L for High/Medium/Low respectively to indicate the priority of a user story.
+  <br>
+  5) You can add new rows by clicking the "+" icon in top-right, and you can delete by clicking the "X". Also, you can sort the user stories according to actors by using the "up & down arrow keys".
+  <br>
+  <b>Link to questionnaire(to be completed when instructed): </b> <a href="https://goo.gl/forms/sKlZHXXtck9np0Do2" target="_blank">CLICK</a> 
+  <br>
+  Now, you can proceed with the case study and write the user stories:
+  <br><hr>
+  <b style="margin-left: 510px;">Sample Entries</b>
   <hr>
   <span onclick="add()" title="Add Row" class="table-add glyphicon glyphicon-plus" font-size="10px"></span>
+  <img src="img/img.png" style="height: 135px; width: auto; margin-left: 200px;"><br><hr>
   <div id="table" class="table-editable">
-    <img src="img.png" style="height: 135px; width: auto; margin-left: 200px;"><br><hr>
     <table class="table" id="tab">
       <tr class="tr1">
         <td>-</td>
-        <td class="r1" contenteditable="true">Batch</td>
+        <td class="r1" contenteditable="true">Venue</td>
         <td contenteditable="true">Name</td>
         <td contenteditable="true">Roll_no</td>
         <td>-</td>
@@ -63,7 +72,8 @@
     </table>
   </div>
 
-  <button style="height: 35px; font-weight: bold; background: lightgrey;" onclick="exportTableToCSV('_Enter_your_roll_number_.csv')">SUBMIT</button>
+  <!--<button style="height: 35px; font-weight: bold; background: lightgrey;" onclick="exportTableToCSV('_Enter_your_roll_number_.csv')">SUBMIT</button>-->
+  <button style="height: 35px; font-weight: bold; background: lightgrey;" onclick="exporttocsv()">SUBMIT</button>
 </div>
 
 <!-- <div>
@@ -72,6 +82,8 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js'></script>
+<script src="js/jquery.min.1.11.1.js" type="text/javascript"></script>  
+<script src="js/jquery.tabletoCSV.js" type="text/javascript"></script>
 <script src="js/index.js"></script>
 
 </body>
